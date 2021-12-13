@@ -1,0 +1,4 @@
+# create-nuxtjs
+
+nuxtjs前后端接管数据的方式是采用asyncData，这个api是充当在服务端调用异步接口的作用。服务端通过asyncData调用数据之后返回数据，渲染完整个页面之后，返回给前端。这就导致了在asyncData中我们无法使用this来获取数据。因为this是前端的概念，而asyncData是在服务端。
+为了请求数据我安装了@nuxtjs/axios并根据文档，在nuxt.config.js中进行配置，实现前后端数据共享
